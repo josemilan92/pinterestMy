@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<div class="jumbotron " >
+  <div class="container"  >
+    <p>
+      <strong>Nombre:</strong>
+
+    </p>
+    <h1 class="titulo"><%= @pin.name %></h1>
+
+
+  <div class="row">
+    <div class="col-md-4">
+  <%= image_tag(@pin.photo,  :style =>'height:200px') %>
+    </div>
+    <div class="col-md-4">
+      <div class="page-header">
+        <h2> Description:</h2>
+      </div>
+      <h3><%= @pin.description %></h3>
+
+      <br>
+
+
+    </div>
+    <div class="col-md-4">
+      <div class="page-header">
+        <%= link_to 'Back', pins_path, :class=>'btn'%>
+
+        <%= link_to "Mas pins del mismo usuario", pinsof_path(@pin.user.id), :class=>'btn' %>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<p>
+
+
+<div class="container">
+  <div class="row">
+
+  </div>
+</div>
+
+
